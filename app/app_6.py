@@ -33,7 +33,6 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 stock = st.sidebar.text_input(label="Ticker",value='AAPL')
 
-@st.cache(allow_output_mutation=True, show_spinner=False)
 def get_data(start):
     ticker = yf.Ticker(stock)
     try:
