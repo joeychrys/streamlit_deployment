@@ -15,6 +15,6 @@ This simple project uses Traefik as a reverse proxy to a Streamlit application a
 1. `sudo docker-compose -f local.yml up --build`  
 
 ## Production Deployment
-1. In `traefik.yml`, change `example@test.com` to your email. 
-2. In `traefik.yml`, change `example.com` to your domain.
+1. In `compose/traefik/traefik.yml`, change `example@test.com` to your email. 
+2. In `compose/traefik/traefik.yml`, change `example.com` to your domain.
 3. `sudo docker-compose -f production.yml up --build`
