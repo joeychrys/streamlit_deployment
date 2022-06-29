@@ -160,6 +160,6 @@ cython_debug/
 #.idea/
 
 # ignores production code for traefik and production yml
-compose/traefik/
-production.yml
+# compose/traefik/
+# production.yml
 

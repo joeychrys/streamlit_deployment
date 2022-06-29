@@ -1,0 +1,27 @@
+version: '3'
+
+volumes:
+  production_traefik: {}
+
+services:
+  streamlit:
+    build: 
+      context: .
+      dockerfile: ./compose/streamlit/Dockerfile
+    image: streamlit_local
+    container_name: streamlit_app
+    restart: always
+    expose:
+      - "8501"
+    command: streamlit run app/app_6.py
+
+  traefik:
+    build:
+      context: .
+      dockerfile: ./compose/traefik/Dockerfile
+    image: traefik_production
+    volumes:
+      - production_traefik:/etc/traefik/acme:z
+    ports:
+      - "0.0.0.0:80:80"
+      - "0.0.0.0:443:443"
