@@ -1,0 +1,20 @@
+# Streamlit + Traefik + Docker
+This simple project uses Traefik as a reverse proxy to a Streamlit application and handles SSL certs with Lets Encrypt.
+
+## Requirements
+- Docker Compose
+- Python 3.9
+
+## Local Deployment
+#### Python:
+1. `cd app`  
+2. `pip install -r requirements.txt`  
+3. `streamlit run app_6.py`  
+
+#### Docker:
+1. `sudo docker-compose -f local.yml up --build`  
+
+## Production Deployment
+1. In `traefik.yml`, change `example@test.com` to your email. 
+2. In `traefik.yml`, change `example.com` to your domain.
+3. `sudo docker-compose -f production.yml up --build`
