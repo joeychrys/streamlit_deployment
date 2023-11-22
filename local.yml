@@ -10,4 +10,4 @@ services:
     restart: always
     ports:
       - 8501:8501
-    command: streamlit run app/app_6.py
+    command: streamlit run src/app.py

@@ -1,6 +1,0 @@
-pandas==1.4.3
-streamlit==1.10.0
-ta==0.10.1
-yfinance==0.1.72
-watchdog==2.1.9
-protobuf==3.19.0

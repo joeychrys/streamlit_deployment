@@ -3,14 +3,18 @@ import yfinance as yf
 from ta import volume, trend
 
 
-st.set_page_config(page_title='Technical Analysis',page_icon='📈')
+st.set_page_config(page_title='Technical Analysis',page_icon='📈', layout='wide')
 hide_streamlit_style = """
             <style>
+            .reportview-container {
+                margin-top: -2em;
+            }
             #MainMenu {
 
                 visibility: hidden;
                
                }
+            .stDeployButton {display:none;}
             footer {
 
                 visibility: hidden;
