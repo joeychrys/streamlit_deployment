@@ -7,9 +7,9 @@ This simple project uses Traefik as a reverse proxy to a Streamlit application a
 
 ## Local Deployment
 #### Python:
-1. `cd app`  
+1. `cd src`  
 2. `pip install -r requirements.txt`  
-3. `streamlit run app_6.py`  
+3. `streamlit run app.py`  
 
 #### Docker:
 1. `sudo docker-compose -f local.yml up --build`  
